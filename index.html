@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>AJUDANTE DO DIA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>AJUDANTE DO DIA 🎉</h1>
+  <div style="display: flex; justify-content: center; align-items: center; gap: 50px; flex-wrap: wrap;">
+    <canvas id="wheel" width="500" height="500"></canvas>
+    <div id="winner">
+      <h2>ALUNO SORTEADO:</h2>
+      <img id="winnerPhoto" src="" alt="" />
+      <p id="winnerName"></p>
+    </div>
+  </div>
+  <button id="spin">Girar</button>
+  <audio id="spinSound" src="assets/roda.mp3" preload="auto"></audio>
+  <audio id="winSound" src="assets/vitoria.mp3" preload="auto"></audio>
+  <script>
+    const alunos = [{'nome': 'NOAH', 'arquivo': 'alunos/noah.jpg'}, {'nome': 'NATHAN', 'arquivo': 'alunos/nathan.jpg'}, {'nome': 'EMILLY', 'arquivo': 'alunos/emilly.jpg'}, {'nome': 'LAURA', 'arquivo': 'alunos/laura.jpg'}, {'nome': 'ANALU', 'arquivo': 'alunos/analu.jpg'}, {'nome': 'BENJAMIN', 'arquivo': 'alunos/benjamim.jpg'}, {'nome': 'BERNARDO', 'arquivo': 'alunos/bernardo.jpg'}, {'nome': 'MARIA ANTÔNIA', 'arquivo': 'alunos/maria_antonia.jpg'}, {'nome': 'ARTHUR CALAZANS', 'arquivo': 'alunos/arthur_calazans.jpg'}, {'nome': 'ARTHUR CHERICE', 'arquivo': 'alunos/arthur_cherice.jpg'}, {'nome': 'LUCAS H. PALHARES', 'arquivo': 'alunos/lucas_h._palhares.jpg'}, {'nome': 'GUSTAVO', 'arquivo': 'alunos/gustavo.jpg'}, {'nome': 'VALENTINA MARTINENGHI', 'arquivo': 'alunos/valentina_martinenghi.jpg'}, {'nome': 'MARTINA', 'arquivo': 'alunos/martina.jpg'}, {'nome': 'BENÍCIO', 'arquivo': 'alunos/benicio.jpg'}, {'nome': 'THOMAS', 'arquivo': 'alunos/thomas.jpg'}, {'nome': 'MIGUEL', 'arquivo': 'alunos/miguel.jpg'}, {'nome': 'VALENTINA F. FIAMETTI', 'arquivo': 'alunos/valentina_fontana_fiametti.jpg'}, {'nome': 'MATEUS', 'arquivo': 'alunos/mateus.jpg'}, {'nome': 'MAITÊ', 'arquivo': 'alunos/maite.jpg'}, {'nome': 'JOÃO R. GROH', 'arquivo': 'alunos/joao_r._groh.jpg'}, {'nome': 'CLARA', 'arquivo': 'alunos/clara.jpg'}, {'nome': 'HEITOR', 'arquivo': 'alunos/heitor.jpg'}, {'nome': 'JOÃO LUIZ', 'arquivo': 'alunos/joao_luiz.jpg'}, {'nome': 'SOFIA', 'arquivo': 'alunos/sofia.jpg'}, {'nome': 'HELENA', 'arquivo': 'alunos/helena.jpg'}, {'nome': 'LUCAS SANTIAGO', 'arquivo': 'alunos/lucas_santiago.jpg'}];
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

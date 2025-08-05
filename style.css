@@ -1,0 +1,38 @@
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+}
+canvas {
+  margin-top: 20px;
+}
+button {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px 30px;
+  background: #ffcc00;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #888;
+}
+#winner {
+  margin-top: 10px;
+  max-width: 400px;
+}
+#winner img {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 6px solid #ffcc00;
+}
+#winner h2 {
+  font-size: 26px;
+}
+#winner p {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+}
