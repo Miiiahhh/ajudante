@@ -9,16 +9,16 @@ const winSound = document.getElementById('winSound');
 let angle = 0;
 let spinning = false;
 
-// Carrega os alunos da variável global
-let alunosDisponiveis = [...alunos];
+// 1. Carregar alunos disponíveis do localStorage, ou usar todos
+let alunosDisponiveis = JSON.parse(localStorage.getItem('alunosDisponiveis')) || [...alunos];
 
-// Verifica se já existe um sorteado salvo
+// 2. Verifica se já há sorteado
 const alunoSalvo = localStorage.getItem('alunoSorteado');
 if (alunoSalvo) {
   const sorteado = JSON.parse(alunoSalvo);
   winnerName.textContent = sorteado.nome;
   winnerPhoto.src = sorteado.arquivo;
-  spinning = true; // Impede novo sorteio até reset
+  spinning = true;
 }
 
 function drawWheel() {
@@ -79,18 +79,21 @@ function drawRotation() {
 function showWinner() {
   const index = Math.floor(((360 - (angle % 360)) / 360) * alunosDisponiveis.length) % alunosDisponiveis.length;
   const sorteado = alunosDisponiveis.splice(index, 1)[0];
+
   winnerName.textContent = sorteado.nome;
   winnerPhoto.src = sorteado.arquivo;
   winSound.play();
   drawRotation();
 
-  // Salva o sorteado no localStorage
+  // Salva sorteado e lista atualizada
   localStorage.setItem('alunoSorteado', JSON.stringify(sorteado));
+  localStorage.setItem('alunosDisponiveis', JSON.stringify(alunosDisponiveis));
 }
 
-// Permite resetar o sorteio (opcional)
+// Permite resetar tudo
 function resetarSorteio() {
   localStorage.removeItem('alunoSorteado');
+  localStorage.removeItem('alunosDisponiveis');
   location.reload();
 }
 
